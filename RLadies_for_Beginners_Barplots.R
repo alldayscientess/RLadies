@@ -18,7 +18,7 @@ setwd("~/RLadies/")
 data_short=read.csv("STEM_Careers_FM_Short.csv", row.names = 1, header = TRUE)
 
 #What's the data again?
-bp_short
+data_short
 
 #The barplot() fucntion requires the orientation of the data to be transposed we can use this super fun
 #function called t()
@@ -40,9 +40,9 @@ barplot(data_short_t)
 par(mar = c(5,5,2,2))
 barplot(data_short_t, 
         beside=TRUE, # puts bars side-by-side
-        las=2, # orients the direction of the x/y lables 
+        las=1, # orients the direction of the x/y lables 
         cex.axis=1, # changes the font size of the y-axis
-        cex.names = 1, # changes the font size of the x-axi
+        cex.names = 1, # changes the font size of the x-axis
         xlab="STEM Career", # where you can include the x-axis label
         ylab="Number of jobs (1x10^5)", # where you can include the y-axis label
         col=c("black", "grey"), # where you can include the colors of your bars
